@@ -363,7 +363,7 @@
 
     .projectsCard{
         /* height:100%;     */
-        height: 270px;
+        height: 300px;
         max-width: 400px;
         /* width: 275px; */
         width: 85%;
@@ -374,9 +374,9 @@
         flex-direction: column;
         justify-content: space-evenly;   
         background-color: white;
-        overflow: hidden;
-        overflow-x: hidden;
-        overflow-y: hidden;
+        /* overflow: hidden; */
+        /* overflow-x: hidden; */
+        /* overflow-y: hidden; */
     }
 
     .projectsImgDiv{
@@ -389,47 +389,39 @@
     }
 
     .projectsImg{
-        height: 100%;
-        width: 100%;
-        /* border-radius: 20px; */
+        height: 200px;
+        aspect-ratio: 16/9;
+        width: 100%;        
     }
 
     .projectsCard > p {
         font-size: 20px;
         font-weight: 500;
-        /* background-color:rgb(52, 65, 85); */
         background-color: rgba(53, 70, 78, 1);
-        /* background-color: var(--maincolor2); */
-        
         padding: 10px;
         border-radius: 5px;
         z-index: 4;
+        position: relative;
+        top: -70px;
 
     }
 
     .projectsCard:hover > .projectsDetail{
         display: flex;
-        /* transition: 2s; */
-            /* animation: slideUp 2s; */
-            position: relative;
-        bottom: 150px;
-        transform: translateY(150px);
+        position: relative;
+        /* top: -150px; */
+        /* transform: translateY(150px); */
     }
 
     .projectsCard > .projectsDetail{
         /* display: none; */
         transform: translateY(320px);
         position: relative;
-        bottom: 150px;
-        /* background-color: var(--maincolor2); */
+       top: -240px;
         background-color: rgba(53, 70, 78, 0.8);
         padding: 10px;
         border-radius: 10px;
-        /* margin-bottom: 20px; */
-        /* z-index: -1; */
-        transition: 2s;
-        height: 56px;
-        margin-top: -60px;
+       
     }
 
     .resume{
@@ -621,7 +613,7 @@
     .navLinks{
         display: flex;
         align-items: center;
-        gap: 10px;
+        gap: 15px;
     }
 
     .navLinks > a{
@@ -646,12 +638,21 @@
         text-decoration: underline;
     }
 
+    .menu{
+        display: none;
+    }
+
+    #closeMenu{
+        display: none;
+    }
+
     .home{
         display: flex;
         flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
         height: 80vh;
+
         color: white;
         width: 100%;
         /* background-color: var(--maincolor2); */
@@ -1137,6 +1138,14 @@
         text-decoration: underline;
         text-decoration-color: rgba(53, 70, 78, 1);
         color: black;
+    }
+
+    .menu{
+        display: none;
+    }
+
+    #closeMenu{
+        display: none;
     }
 
     main{
