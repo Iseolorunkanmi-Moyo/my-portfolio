@@ -1,12 +1,23 @@
-var menu =  document.getElementById("menu")
-var closeMenu =  document.getElementById("closeMenu")
-var linkDiv =  document.getElementById("navLinks")
+window.addEventListener("scroll", reveal)
 
-closeMenu.addEventListener("click", () => {
-    linkDiv.style.display = "none"
-    menu.style.display = "flex"
-})
+function reveal(){
+    var reveals = document.querySelectorAll('.reveal');
+ 
+    for(var i = 0; i < reveals.length; i++){
+        var windowHeight = window.innerHeight;
 
-menu.addEventListener("click", () => {
-    linkDiv.style.display = "flex"
-})
+        var revealTop = reveals[i].getBoundingClientRect().top;
+
+    var revealpoint = 10;
+
+    if(revealTop < windowHeight  - revealpoint){
+        reveals[i].classList.add('active');
+    }
+
+    else{
+        reveals[i].classList.remove('active');
+    }
+    }
+
+
+}

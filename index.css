@@ -442,6 +442,9 @@
 
     .resumePic{
         border-radius: 20px;
+        height: 50px;
+        width: 50px;
+
     }
 
     .resumeDiv{
@@ -1465,6 +1468,7 @@
 
     .resumePic{
         border-radius: 20px;
+        height: 200px;
     }
 
     .resumeDiv{
